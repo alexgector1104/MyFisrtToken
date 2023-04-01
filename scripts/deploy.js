@@ -1,13 +1,14 @@
-import { ethers } from "hardhat";
+const hre = require("hardhat");
 
 async function main() {
   
-  const Token = await ethers.getContractFactory("Token");
-  const token = await Token.deploy(
+  const MyFisrtToken = await hre.ethers.getContractFactory("MyFisrtToken");
+  const myFisrtToken = await MyFisrtToken.deploy(
     //construntor params
+    '1'
   );
 
-  await token.deployed();
+  await myFisrtToken.deployed();
 
   console.log(`Token Contract is deployed to: ${token.address}`);
 }
