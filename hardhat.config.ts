@@ -24,9 +24,14 @@ module.exports = {
       url: `https://eth-sepolia.g.alchemy.com/v2/${SETPOL_API_KEY}`,
       accounts: [`0x` + process.env.PRIVATE_KEY],
       chainId: 11155111
+    },
+    bsctest: {
+      url: `https://data-seed-prebsc-1-s3.binance.org:8545`,
+      accounts: [`0x` + process.env.PRIVATE_KEY],
+      chainId: 97
     }
   },
   etherscan: {
-    apiKey: "PD6SWDBT9XTRY81QW9E7VYN721KGBX3ZD5"
+    apiKey: process.env.API_KEY
   },
 };
